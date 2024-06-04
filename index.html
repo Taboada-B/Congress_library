@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library of Congress Search Engine</title>
+    <title>Search Engine</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-    <div class="card">
-        <p id="search"></p>
-        <p id="format"></p>
-        <button id="click-me">Click Me</button>
-    </div>
+    <header>
+        <h1>Library of Congress Search Engine</h1>
+    </header>
 
+    <main>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search!"> // I don't think I need 
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="format-dropdown" style="margin: 10px;"></div>
+            <label for="format-select">Select A Format...</label>
+            <select id="format-select">
+            <option value="?">??</option>
+            <option value="?">??</option>
+            <option value="?">??</option>
+            <option value="?">??</option>
+            </select>
+        </div>
+
+        <div id="search-results">
+            <a href="search-results.html">View Search Results</a>
+        </div>
+
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script src="./assets/js/java.js"></script>
-
 </html>
