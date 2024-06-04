@@ -1,5 +1,5 @@
-// click me button 
-const fetchButton = document.getElementById('#click-me');
+// click me button
+const fetchButton = document.getElementById("#click-me");
 
 function getApi() {
   // fetch request gets a list of all the repos for the node.js organization
@@ -22,6 +22,27 @@ function getApi() {
         link.textContent = repo.html_url;
         link.href = repo.html_url;
 
+//todo: make store to local storage function
+const storeSearchResults() {
+    localStorage.setItem("searchResults". JSON.stringify(searchResults));
+}
+
+//todo: make get from local storage function
+
+const readSearchResultsFromStorage() {
+    let searchResults = JSON.parse(localStorage.getItem("searchResults"));
+    if (!Array) {
+        searchResults = []
+    }
+}
+
+//todo: make function to display search results
+
+function sayHello() {
+  return console.log("hello");
+}
+
+fetchButton.addEventListener("click", sayHello()); //getApi);
         // Appending the link to the tabledata and then appending the tabledata to the tablerow
         // The tablerow then gets appended to the tablebody
         tableData.appendChild(link);
@@ -30,6 +51,5 @@ function getApi() {
       }
     });
 }
-
 
 fetchButton.addEventListener('click', getApi());
