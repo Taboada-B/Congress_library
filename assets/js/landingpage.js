@@ -1,5 +1,5 @@
-// click me button 
-const fetchButton = document.getElementById('#click-me');
+// click me button
+const fetchButton = document.getElementById("#click-me");
 
 // function getApi() {
 //   // fetch request gets a list of all the repos for the node.js organization
@@ -12,7 +12,7 @@ const fetchButton = document.getElementById('#click-me');
 //     .then(function (data) {
 //       console.log(data); // this is now an array of objects
 //       // ? We use a `for...of` loop here because it's a little less code than a traditional `for` loop. We also don't need to keep track of the index `(i)`.
-//       for (const repo of data) { 
+//       for (const repo of data) {
 //         // Creating elements, tablerow, tabledata, and anchor
 //         const createTableRow = document.createElement('tr');
 //         const tableData = document.createElement('td');
@@ -31,9 +31,24 @@ const fetchButton = document.getElementById('#click-me');
 //     });
 // }
 
-function sayHello() {
-    return console.log('hello');
-    
+//todo: make store to local storage function
+const storeSearchResults() {
+    localStorage.setItem("searchResults". JSON.stringify(searchResults));
 }
 
-fetchButton.addEventListener('click', sayHello() );    //getApi);
+//todo: make get from local storage function
+
+const readSearchResultsFromStorage() {
+    let searchResults = JSON.parse(localStorage.getItem("searchResults"));
+    if (!Array) {
+        searchResults = []
+    }
+}
+
+//todo: make function to display search results
+
+function sayHello() {
+  return console.log("hello");
+}
+
+fetchButton.addEventListener("click", sayHello()); //getApi);
